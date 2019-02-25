@@ -4,7 +4,7 @@ const path = require("path");
 const config = {
   entry: "./client/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     filename: "bundle.js"
   },
   module: {
