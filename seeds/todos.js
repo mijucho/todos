@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
           task: "coding",
           priority: 1,
           category: "work",
-          is_complete: "false",
+          is_complete: "true",
           due_at: 1551057598415
         },
         {

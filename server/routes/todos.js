@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { getTodos } = require("../db/todos");
+const { createTodo } = require("../db/todos");
 
-//GET  /api/v1/todos/priority
+//GET  /api/v1/todos/
 router.get("/", (req, res) => {
   getTodos()
     .then(todos => {
@@ -14,10 +15,18 @@ router.get("/", (req, res) => {
     });
 });
 
-// POST /api/v1/todos/priority
+// POST /api/v1/todos
 router.post("/", (req, res) => {
-  console.log("New Todos", req.params.priority, "todos:", req.body.task);
-  res.json({ id: 2 });
+  const todo = req.body;
+
+  createTodo(todo)
+    .then(todo => {
+      res.json(todo);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: "Something went wrong" });
+    });
 });
 
 module.exports = router;
