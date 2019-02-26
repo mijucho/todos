@@ -5,7 +5,8 @@
   "author": "mijucho <chomiju38@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon server & webpack --watch"
+    "dev": "nodemon server & webpack --watch",
+    "postinstall": "webpack && knex migrate:latest"
   },
   "dependencies": {
     "@babel/core": "^7.3.3",
