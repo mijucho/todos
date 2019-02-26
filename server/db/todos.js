@@ -6,6 +6,7 @@ function getTodos(testDb) {
 }
 
 function createTodo(todo, testDb) {
+  console.log(todo);
   const db = testDb || connection;
   return db("todos").insert(todo);
 }
