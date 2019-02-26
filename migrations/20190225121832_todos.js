@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.integer("priority");
     table.string("category");
     table.boolean("is_complete");
-    table.integer("due_at");
+    table.string("due_at");
   });
 };
 

@@ -11,7 +11,7 @@ exports.seed = function(knex, Promise) {
           priority: 1,
           category: "work",
           is_complete: "true",
-          due_at: 1551057598415
+          due_at: "1551057598415"
         },
         {
           id: 2,
@@ -19,7 +19,7 @@ exports.seed = function(knex, Promise) {
           priority: 2,
           category: "work",
           is_complete: "false",
-          due_at: 1551057624462
+          due_at: "1551057624462"
         },
         {
           id: 3,
@@ -27,7 +27,7 @@ exports.seed = function(knex, Promise) {
           priority: 3,
           category: "home",
           is_complete: "false",
-          due_at: 1551057661108
+          due_at: "1551057661108"
         },
         {
           id: 4,
@@ -35,7 +35,7 @@ exports.seed = function(knex, Promise) {
           priority: 4,
           category: "home",
           is_complete: "false",
-          due_at: 1551057683143
+          due_at: "1551057683143"
         },
         {
           id: 5,
@@ -43,7 +43,7 @@ exports.seed = function(knex, Promise) {
           priority: 5,
           category: "home",
           is_complete: "false",
-          due_at: 1551057696117
+          due_at: "1551057696117"
         }
       ]);
     });
