@@ -1,5 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import { HashRouter as Router, Route } from "react-router-dom";
+
+import Home from "./Home";
+import SendTodo from "./SendTodo";
 
 import { getTodos } from "../actions";
 
@@ -9,20 +13,19 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>TODOS</h1>
-        <ul>
-          {this.props.todos.map(todos => {
-            return <li>{todos.task}</li>;
-          })}
-        </ul>
-      </div>
+      <Router>
+        <div>
+          <h1>TODO List</h1>
+          <Route exact path="/" component={Home} />
+
+          <Route path="/todo" component={SendTodo} />
+          {/* <Route path="/:category" component={Category} />
+          <Route path="/:completed" component={Completed} />
+          <Route path="/priority" component={Priority} />  */}
+        </div>
+      </Router>
     );
   }
 }
-function mapStateToProps(state) {
-  return {
-    todos: state.todos
-  };
-}
-export default connect(mapStateToProps)(App);
+
+export default connect()(App);

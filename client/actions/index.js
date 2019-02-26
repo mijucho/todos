@@ -1,4 +1,4 @@
-import { getTodos as apiGetTodos } from "../api/todos";
+import { getTodos as apiGetTodos, sendTodo as apiSendTodo } from "../api/todos";
 
 export function getTodos() {
   return dispatch => {
@@ -12,5 +12,13 @@ export function saveTodos(todos) {
   return {
     type: "SAVE_TODOS",
     todos: todos
+  };
+}
+
+export function sendTodo(list) {
+  return dispatch => {
+    return apiSendTodo(list).then(result => {
+      dispatch(getTodos());
+    });
   };
 }
