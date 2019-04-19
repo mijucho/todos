@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { HashRouter as Router, Route } from "react-router-dom";
-
+import { getByPriority } from "../actions";
+import { getByCategory } from "../actions";
+import { getCompleted } from "../actions";
 import Home from "./Home";
 import SendTodo from "./SendTodo";
 
