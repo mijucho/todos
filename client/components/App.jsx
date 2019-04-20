@@ -21,7 +21,7 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
 
           <Route path="/todo" component={SendTodo} />
-          {/* <Route path="/:category" component={Category} />
+          <Route path="/:category" component={Category} />
           <Route path="/:completed" component={Completed} />
           <Route path="/priority" component={Priority} />  */}
         </div>
